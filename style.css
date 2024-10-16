@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+#breedSearch {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#searchButton {
+    padding: 10px;
+}
+
+#breedSelect {
+    width: 50%;
+    padding: 10px;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.gallery-item img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-button:hover {
+    background-color: #0056b3;
+}
+
+#quizContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quizContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.quiz-image {
+    width: 300px;
+    height: auto;
+}
+
+.option-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+}
+
+#closeQuizButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.feedback {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#quizContainer button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#quizContainer button:hover {
+    background-color: #0056b3;
+}
+
+
+#quizContainer,
+#quizContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#flashcardContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flashcard div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.front {
+    background-color: #f8f9fa;
+}
+
+.back {
+    background-color: #d4edda;
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.flashcard.flipped .back {
+    transform: rotateY(0);
+}

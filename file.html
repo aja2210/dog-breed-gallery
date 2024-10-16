@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dog Breed Gallery</h1>
+        <input type="text" id="breedSearch" placeholder="Search for a breed...">
+        <button id="searchButton">Fetch!</button>
+        <select id="breedSelect"></select>
+        <button id="deleteAllButton">Empty Gallery</button>
+        <button id="startQuizButton">Practice Questions</button>
+        <button id="startFlashcardsButton">Study Flashcards</button>
+    </header>
+
+    <div id="gallery"></div>
+
+    <div id="quizContainer" style="display:none;">
+        <div id="quizContent">
+            <button id="closeQuizButton">X</button>
+            <h2>Dog Breed Quiz</h2>
+            <div id="questionContainer"></div>
+            <p id="scoreDisplay"></p>
+        </div>
+    </div>
+    
+
+    <!-- Flashcard Section -->
+    <div id="flashcardContainer" style="display: none;">
+        <button id="nextFlashcardButton">Next</button>
+        <div id="flashcard" class="flashcard">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <button id="closeFlashcardsButton">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
